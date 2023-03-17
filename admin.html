@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Holidays</title>
+ <link rel="shortcut icon" type="image/png" href= "favicon.png">  
+ <link href="Style.css" rel= "stylesheet"> 
+ <script src="lettersOnly.js"></script>
+ 
+</head>
+
+
+<body>
+    <div class="gridContainer3">
+
+         <!-- Hamburger Menu  -->
+ <div class="menu-wrap">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger"><div></div></div>
+    <div class="menu">
+    <div>
+        <div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ViewHolidays.php">View Holidays</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="credits.html">Credits</a></li>
+                <li><a href="Wireframes.pdf">Wireframes</a></li>
+
+            </ul>
+        </div>
+    </div>
+ </div>
+ </div>
+
+    <header>
+        <h1>Admin</h1>
+    </header>
+
+<main>
+    <section class="warning">
+    <p>*This page is designed only for the administrator*</p>
+</section>
+<br><br><br><br>
+ 
+<div class="rotate">
+    Please Rotate your phone
+</div>
+
+    <form action="reflect.php" method="get">
+        <fieldset>
+            <legend>Add a new holiday</legend>
+
+            <section class="name">
+            Holiday name
+            <input type="text" name="holidayTitle" size="20" required onkeyup="lettersOnly(this)" >
+        </section>
+
+        <section class="type">
+            Category
+            <select name="holidayCategory" >
+                <option value="Luxury">Luxury</option>
+                <option value="Safari">Safari</option>
+                <option value="Opera">Opera</option>
+                <option value="Walking">Walking</option>
+                <option value="Weddings">Weddings</option>
+                <option value="Golf">Golf</option>
+                </select>
+            </section>
+
+            <section class="location">
+            Location
+            <input type="text" name="holidayLocation" size="20" required onkeyup="lettersOnly(this)" >
+        </section>
+
+        <section class="desc">
+            <p>Description</p>
+            <textarea style="resize:none" name="holidayDescription" placeholder="Write here..." rows="10" cols="80" ></textarea>  
+        </section>
+            
+        <section class="duration">
+            Duration
+            <input type="number" name="holidayDuration" min="1" required>
+        </section>
+
+        <section class="price">
+            Price
+            <input type="number" name="holidayPrice" min="400" required>
+        </section>
+
+             <section class="addbutton">
+            <input type="submit" value="Add Holiday">
+        </section>
+        <br>
+
+
+            </fieldset>
+            </form>
+</main>
+
+<footer>&#169; Mitoi Cristian</footer>
+
+
+</div>
+</body>
+</html>
